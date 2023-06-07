@@ -1,5 +1,7 @@
 from turtle import Screen as s
 from paddle import Paddle
+from ball import Ball
+import time
 
 class GameUIControl():
     
@@ -11,6 +13,8 @@ class GameUIControl():
         self.screen.tracer(0)
         
         self.setUpPaddle()
+        
+        self.ball = Ball()
     
     def setUpPaddle(self):
         self.paddle1 = Paddle()
@@ -27,4 +31,9 @@ class GameUIControl():
         
     def run(self):
         while True:
+            time.sleep(0.03)
+            self.ball.detect_collision(self.paddle1)
+            self.ball.detect_collision(self.paddle2)
+            self.ball.check_border()
+            self.ball.move()
             self.screen.update()
