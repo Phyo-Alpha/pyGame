@@ -5,4 +5,6 @@ Hello, this is a collection pygame project that I will be building for funsy, I 
 First Game is classic Ping Pong,
 
 PingPong (v.1.0) - Added (7/6/2023)
-. Added a screen and two paddle
+
+- Added a screen and two paddle
+- Added the ball, velocity and collision magic
